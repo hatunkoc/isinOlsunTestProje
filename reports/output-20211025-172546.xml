@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.10.0 on win32)" generated="20211025 17:25:46.230" rpa="false" schemaversion="2">
+<suite id="s1" name="isinOlsunFilterTest" source="C:\Users\hatun\PycharmProjects\isinOlsunTest\isinOlsunTests\isinOlsunFilterTest.robot">
+<test id="s1-t1" name="open browser">
+<kw name="create session" library="utilsApp" type="SETUP">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20211025 17:25:47.705" endtime="20211025 17:25:47.705"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211025 17:25:47.705" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20211025 17:25:47.705" endtime="20211025 17:25:49.840"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211025 17:25:49.840" endtime="20211025 17:25:50.478"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:47.704" endtime="20211025 17:25:50.479"/>
+</kw>
+<kw name="open the browser" library="isinOlsunFilterApp">
+<kw name="go to homepage" library="isinOlsunHomepage">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${HOMEPAGE}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20211025 17:25:50.479" level="INFO">Opening url 'https://isinolsun.com/'</msg>
+<status status="PASS" starttime="20211025 17:25:50.479" endtime="20211025 17:25:53.380"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:50.479" endtime="20211025 17:25:53.380"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:50.479" endtime="20211025 17:25:53.381"/>
+</kw>
+<kw name="enter the position" library="isinOlsunFilterApp">
+<kw name="enter the position input" library="isinOlsunFilter">
+<kw name="input" library="utils">
+<arg>css=[data-test='position-search-input']</arg>
+<arg>Garson</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211025 17:25:53.386" endtime="20211025 17:25:54.515"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211025 17:25:54.517" level="INFO">Clicking element 'css=[data-test='position-search-input']'.</msg>
+<status status="PASS" starttime="20211025 17:25:54.516" endtime="20211025 17:25:55.677"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211025 17:25:55.678" level="INFO">Typing text 'Garson' into text field 'css=[data-test='position-search-input']'.</msg>
+<status status="PASS" starttime="20211025 17:25:55.677" endtime="20211025 17:25:57.445"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:53.384" endtime="20211025 17:25:57.446"/>
+</kw>
+<kw name="click" library="utils">
+<arg>css=li:nth-of-type(1) &gt; .dropdown-item &gt; span</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211025 17:25:57.447" endtime="20211025 17:25:58.695"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211025 17:25:58.696" level="INFO">Clicking element 'css=li:nth-of-type(1) &gt; .dropdown-item &gt; span'.</msg>
+<status status="PASS" starttime="20211025 17:25:58.695" endtime="20211025 17:25:59.805"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:57.446" endtime="20211025 17:25:59.805"/>
+</kw>
+<kw name="input" library="utils">
+<arg>css=[data-test='location-search-input']</arg>
+<arg>istanbul</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20211025 17:25:59.805" endtime="20211025 17:26:00.878"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211025 17:26:00.879" level="INFO">Clicking element 'css=[data-test='location-search-input']'.</msg>
+<status status="PASS" starttime="20211025 17:26:00.878" endtime="20211025 17:26:01.954"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOCATOR}</arg>
+<arg>${TEXT}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211025 17:26:01.955" level="INFO">Typing text 'istanbul' into text field 'css=[data-test='location-search-input']'.</msg>
+<status status="PASS" starttime="20211025 17:26:01.955" endtime="20211025 17:26:03.728"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:59.805" endtime="20211025 17:26:03.729"/>
+</kw>
+<kw name="click" library="utils">
+<arg>css=li:nth-of-type(1) &gt; .dropdown-item</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211025 17:26:03.730" endtime="20211025 17:26:04.259"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211025 17:26:04.260" level="INFO">Clicking element 'css=li:nth-of-type(1) &gt; .dropdown-item'.</msg>
+<status status="PASS" starttime="20211025 17:26:04.259" endtime="20211025 17:26:05.394"/>
+</kw>
+<status status="PASS" starttime="20211025 17:26:03.729" endtime="20211025 17:26:05.395"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:53.383" endtime="20211025 17:26:05.395"/>
+</kw>
+<kw name="click find job button" library="isinOlsunFilter">
+<kw name="click" library="utils">
+<arg>css=[data-test='main-search-button']</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20211025 17:26:05.396" endtime="20211025 17:26:05.925"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SELECTOR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211025 17:26:05.927" level="INFO">Clicking element 'css=[data-test='main-search-button']'.</msg>
+<status status="PASS" starttime="20211025 17:26:05.925" endtime="20211025 17:26:13.331"/>
+</kw>
+<status status="PASS" starttime="20211025 17:26:05.396" endtime="20211025 17:26:13.331"/>
+</kw>
+<status status="PASS" starttime="20211025 17:26:05.396" endtime="20211025 17:26:13.332"/>
+</kw>
+<kw name="check find job page" library="isinOlsunFilter">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>garson</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211025 17:26:13.333" endtime="20211025 17:26:14.119"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>İstanbul Garson</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20211025 17:26:14.120" endtime="20211025 17:26:14.863"/>
+</kw>
+<kw name="Location Should Contain" library="SeleniumLibrary">
+<arg>is-ilanlari</arg>
+<doc>Verifies that the current URL contains ``expected``.</doc>
+<msg timestamp="20211025 17:26:15.390" level="INFO">Current location contains 'is-ilanlari'.</msg>
+<status status="PASS" starttime="20211025 17:26:14.864" endtime="20211025 17:26:15.390"/>
+</kw>
+<status status="PASS" starttime="20211025 17:26:13.332" endtime="20211025 17:26:15.390"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:53.381" endtime="20211025 17:26:15.390"/>
+</kw>
+<kw name="close session" library="utilsApp" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20211025 17:26:15.390" endtime="20211025 17:26:18.126"/>
+</kw>
+<status status="PASS" starttime="20211025 17:26:15.390" endtime="20211025 17:26:18.126"/>
+</kw>
+<status status="PASS" starttime="20211025 17:25:47.703" endtime="20211025 17:26:18.127"/>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20211025 17:25:46.237" endtime="20211025 17:26:18.131"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="isinOlsunFilterTest">isinOlsunFilterTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
